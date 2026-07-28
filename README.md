@@ -509,10 +509,7 @@ CALCULATE(
 
 
 
-
-
-![Workspace Overview](screenshots/workspace_overview.png)
-
+<img width="2048" height="1115" alt="image" src="https://github.com/user-attachments/assets/0faf4fc8-cfe4-467f-9e96-390619be2672" />
 
 
 
@@ -525,25 +522,18 @@ The project includes a separate real-time analytics pipeline for observation liv
 
 
 POS Event Generator
-
 Microsoft Fabric Eventstream
-
 RetailX Eventhouse 
-
 KQL Database 
-
 KQL Queries and materialized Viwes 
-
 Real - time Dashboard 
 
 
-POS Event Generator
+#### POS Event Generator
 
 A Python notebook named POS was used to generate simulated retail transactions.
 
 The generator produced approximately two events per second.
-
-
 
 
 Each event contained:
@@ -614,7 +604,7 @@ The raw event table uses a 30-day retention period.
 
 
 
-KQL Materialized Views
+#### KQL Materialized Views
 
 Materialized views were created to pre-aggregate streaming data and improve
 dashboard performance.
@@ -623,7 +613,7 @@ dashboard performance.
 
 Grain: One row per store per hour.
 
-Metrics:
+### Metrics:
 
 HourlyRevenue
 TransactionCount
@@ -635,17 +625,16 @@ UniqueProducts
 
 Grain: One row per store per day.
 
-Metrics:
+### Metrics:
 
 DailyRevenue
 TotalTransactions
 AverageBasketSize
-
 PaymentMethodSplit
 
 Grain: One row per payment method per hour.
 
-Metrics:
+### Metrics:
 
 TransactionCount
 Revenue
@@ -653,7 +642,7 @@ Revenue
 Materialized views update incrementally when new events arrive, avoiding repeated
 full-table scans.
 
-**Real-Time Dashboard
+## **Real-Time Dashboard
 
 The RetailX_realtime_dashboard was connected to the KQL database.**
 
@@ -685,7 +674,7 @@ Wallet
 Displays the percentage of return transactions during the last two hours.
 
 
-Example KQL Query
+### Example KQL Query
 
 The following query calculates the top 10 stores by revenue during the last
 15 minutes:
@@ -714,7 +703,7 @@ The POS event generator produced simulated retail transcation at approximately t
 the events were sent through Microsoft Fabric Eventstream and stored in the
 `POSEvents` table inside the KQL database.
 
-KQL materialized viewa used to calculate:
+### KQL materialized viewa used to calculate:
 
 - Hourly store revenue
 - Daily store revenue
