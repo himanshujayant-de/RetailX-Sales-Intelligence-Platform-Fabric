@@ -153,23 +153,23 @@ The Silver layer contains cleaned, validated, typed, and standardised data.
 
 Main Silver tables:
 
-Silver_SalesTransaction
-Silver_store
-Silver_product
-Silver_weather
+- Silver_SalesTransaction
+- Silver_store
+- Silver_product
+- Silver_weather
 
 
 
 
 ### Main Transformations:
-Duplicate removal
-Null-value validation
-Data-type conversion
-String standardisation
-Derived Columns
-Meta Columns
-Data-quality validation
-Weather JSON flattening
+- Duplicate removal
+- Null-value validation
+- Data-type conversion
+- String standardisation
+- Derived Columns
+- Meta Columns
+- Data-quality validation
+- Weather JSON flattening
 
 
 
