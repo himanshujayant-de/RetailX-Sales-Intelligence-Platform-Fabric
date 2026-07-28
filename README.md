@@ -511,7 +511,7 @@ CALCULATE(
 
 
 
-
+![Workspace Overview](screenshots/workspace_overview.png)
 
 
 
