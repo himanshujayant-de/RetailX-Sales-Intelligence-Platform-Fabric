@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/09fa5666-0424-4fbd-8f0e-80812564c209" /># RetailX Sales Intelligence Platform
+# RetailX Sales Intelligence Platform
 
 End-to-end Microsoft Fabric data engineering project combining batch ingestion,
 medallion architecture, PySpark transformations, Warehouse views,
@@ -25,7 +25,7 @@ The project was built to solve four business problems:
 
 ## Architecture
 
-
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/09fa5666-0424-4fbd-8f0e-80812564c209" />
 
 
 ### Batch Flow
