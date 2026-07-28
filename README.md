@@ -84,7 +84,7 @@ Files:
 
 
 
-### 3. OpenWeatherMap API
+### 3. OpenWeatherMap API (Ingest WeatherAPI (Daily))
 
 Weather forecast data was extracted from the OpenWeatherMap API.
 
@@ -93,14 +93,15 @@ Main URL : https://api.openweathermap.org/
 
 https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}
 
-Calls api.openweathermap.org/data/2.5/forecast for 9 cities.
-Fetches 5-day weather forecast (temperature, humidity, rainfall).
-Flattens JSON response into rows (one per forecast interval per city)
-Writes to bronze_weather (overwrite daily)
+- Calls api.openweathermap.org/data/2.5/forecast for 9 cities.
+- Fetches 5-day weather forecast (temperature, humidity, rainfall).
+- Flattens JSON response into rows (one per forecast interval per city)
+- Writes to bronze_weather (overwrite daily)
 
 
 
-
+Sales teams want to correlate rainy days with in-store footfall drops.
+Demonstrates: API auth handling, JSON flattening, rate limit awareness
 
 
 
