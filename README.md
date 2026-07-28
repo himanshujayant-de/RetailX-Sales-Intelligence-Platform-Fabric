@@ -30,23 +30,23 @@ The project was built to solve four business problems:
 
 ### Batch Flow
 
-→ On-Premises SQL Server
-→ On-Premise Data gateway 
-→ Microsift Data fabric pipeline
-→ Bronze lakehouse 
-→ Silver Pyspark Notebooks 
-→ Gold Pyspark Notebooks
-→ Fabric warehouse Viwes
-→ Semantic Model 
-→ Power BI Dashboard
+- On-Premises SQL Server
+-  On-Premise Data gateway 
+- Microsift Data fabric pipeline
+- Bronze lakehouse
+-  Silver Pyspark Notebooks
+- Gold Pyspark Notebooks
+- Fabric warehouse Viwes
+- Semantic Model
+- Power BI Dashboard
 
 
 ### Real-Time Flow
 POS event Generator 
-→ Fabric Eventstream
-→ Eventhouse / KQL Database 
-→ KQL Queries 
-→ Real - Time Dashboard
+- Fabric Eventstream
+- Eventhouse / KQL Database
+- KQL Queries
+- Real - Time Dashboard
 
 ----
 
@@ -62,10 +62,10 @@ new or modified rows.
 
 
 Flow:
-→ Import Sales Transaction csv file to SSMS 
-→ On-Premises Data Gateway
-→ Fabric Copy Activity
-→ Bronze Lakehouse
+- Import Sales Transaction csv file to SSMS
+-  On-Premises Data Gateway
+-   Fabric Copy Activity
+-   Bronze Lakehouse
 
 ### 2. CSV Files  
 
@@ -93,24 +93,36 @@ Main URL : https://api.openweathermap.org/
 
 https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}
 
+Calls api.openweathermap.org/data/2.5/forecast for 9 cities.
+Fetches 5-day weather forecast (temperature, humidity, rainfall).
+Flattens JSON response into rows (one per forecast interval per city)
+Writes to bronze_weather (overwrite daily)
+
+
+
+
+
+
 
 ## Medallion Architecture
 
 The project follows the Bronze, Silver, and Gold medallion architecture.
 
+```text
 Source Systems
-    ↓
+      ↓
 Bronze Lakehouse
-    ↓
+      ↓
 Silver Lakehouse
-    ↓
+      ↓
 Gold Lakehouse
-    ↓
+      ↓
 Fabric Warehouse
-    ↓
+      ↓
 Semantic Model
-    ↓
+      ↓
 Power BI Dashboard
+```
 
 
 
