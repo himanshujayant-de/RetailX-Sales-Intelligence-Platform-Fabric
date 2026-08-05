@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+secrets/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+release/

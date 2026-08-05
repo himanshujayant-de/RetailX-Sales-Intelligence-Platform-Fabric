@@ -1,0 +1,1149 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1606,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "vw_daily_sales",
+        "sourceLineageTag": "[dbo].[vw_daily_sales]",
+        "columns": [
+          {
+            "name": "StoreID",
+            "dataType": "string",
+            "sourceColumn": "StoreID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TransactionDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TransactionDate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "TransactionDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Year",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "dataType": "int64",
+            "sourceColumn": "Month",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "Month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DayOfWeek",
+            "dataType": "int64",
+            "sourceColumn": "DayOfWeek",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DayOfWeek",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "IsWeekend",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "IsWeekend",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "GrossRevenue",
+            "dataType": "double",
+            "sourceColumn": "GrossRevenue",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "GrossRevenue",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "TotalDiscount",
+            "dataType": "double",
+            "sourceColumn": "TotalDiscount",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "TotalDiscount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "NetRevenue",
+            "dataType": "double",
+            "sourceColumn": "NetRevenue",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "NetRevenue",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "TransactionCount",
+            "dataType": "int64",
+            "sourceColumn": "TransactionCount",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "TransactionCount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ReturnCount",
+            "dataType": "int64",
+            "sourceColumn": "ReturnCount",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "ReturnCount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "UniqueProductsSold",
+            "dataType": "int64",
+            "sourceColumn": "UniqueProductsSold",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "UniqueProductsSold",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AvgBasketSize",
+            "dataType": "double",
+            "sourceColumn": "AvgBasketSize",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "AvgBasketSize",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "StoreName",
+            "dataType": "string",
+            "sourceColumn": "StoreName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "City",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Region",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StoreType",
+            "dataType": "string",
+            "sourceColumn": "StoreType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "weather_main",
+            "dataType": "string",
+            "sourceColumn": "weather_main",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "weather_main",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "temp_c",
+            "dataType": "double",
+            "sourceColumn": "temp_c",
+            "sourceProviderType": "real",
+            "sourceLineageTag": "temp_c",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "rain_3h_mm",
+            "dataType": "double",
+            "sourceColumn": "rain_3h_mm",
+            "sourceProviderType": "real",
+            "sourceLineageTag": "rain_3h_mm",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "is_rainy",
+            "dataType": "boolean",
+            "sourceColumn": "is_rainy",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "is_rainy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DiscountRate",
+            "dataType": "double",
+            "sourceColumn": "DiscountRate",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "DiscountRate",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "ReturnRate",
+            "dataType": "double",
+            "sourceColumn": "ReturnRate",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "ReturnRate",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "_gold_load_ts",
+            "dataType": "dateTime",
+            "sourceColumn": "_gold_load_ts",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "_gold_load_ts",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "vw_daily_sales",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "vw_product_rankings",
+        "sourceLineageTag": "[dbo].[vw_product_rankings]",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "string",
+            "sourceColumn": "ProductID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ProductID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TotalRevenue",
+            "dataType": "double",
+            "sourceColumn": "TotalRevenue",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "TotalRevenue",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "UnitsSold",
+            "dataType": "int64",
+            "sourceColumn": "UnitsSold",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "UnitsSold",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TransactionCount",
+            "dataType": "int64",
+            "sourceColumn": "TransactionCount",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "TransactionCount",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StoresSoldIn",
+            "dataType": "int64",
+            "sourceColumn": "StoresSoldIn",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "StoresSoldIn",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ProductName",
+            "dataType": "string",
+            "sourceColumn": "ProductName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ProductName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Category",
+            "dataType": "string",
+            "sourceColumn": "Category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SubCategory",
+            "dataType": "string",
+            "sourceColumn": "SubCategory",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SubCategory",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Brand",
+            "dataType": "string",
+            "sourceColumn": "Brand",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Brand",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "CostPrice",
+            "dataType": "decimal",
+            "sourceColumn": "CostPrice",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "CostPrice",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ListPrice",
+            "dataType": "decimal",
+            "sourceColumn": "ListPrice",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "ListPrice",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "isActive",
+            "dataType": "boolean",
+            "sourceColumn": "isActive",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "isActive",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "LaunchDate",
+            "dataType": "dateTime",
+            "sourceColumn": "LaunchDate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "LaunchDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Gross_marginpct",
+            "dataType": "double",
+            "sourceColumn": "Gross_marginpct",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Gross_marginpct",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "PriceBand",
+            "dataType": "string",
+            "sourceColumn": "PriceBand",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "PriceBand",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DaysSinceLunch",
+            "dataType": "int64",
+            "sourceColumn": "DaysSinceLunch",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "DaysSinceLunch",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "IsNewProduct",
+            "dataType": "boolean",
+            "sourceColumn": "IsNewProduct",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "IsNewProduct",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "silver_load_ts",
+            "dataType": "dateTime",
+            "sourceColumn": "silver_load_ts",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "silver_load_ts",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EstimatedProfit",
+            "dataType": "double",
+            "sourceColumn": "EstimatedProfit",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "EstimatedProfit",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "CategoryRank",
+            "dataType": "int64",
+            "sourceColumn": "CategoryRank",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "CategoryRank",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "OverallRank",
+            "dataType": "int64",
+            "sourceColumn": "OverallRank",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "OverallRank",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "_gold_load_ts",
+            "dataType": "dateTime",
+            "sourceColumn": "_gold_load_ts",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "_gold_load_ts",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "vw_product_rankings",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "vw_store_performance",
+        "sourceLineageTag": "[dbo].[vw_store_performance]",
+        "columns": [
+          {
+            "name": "StoreID",
+            "dataType": "string",
+            "sourceColumn": "StoreID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TotalRevenue",
+            "dataType": "double",
+            "sourceColumn": "TotalRevenue",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "TotalRevenue",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "TotalTransactions",
+            "dataType": "int64",
+            "sourceColumn": "TotalTransactions",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "TotalTransactions",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "AvgBasketSize",
+            "dataType": "double",
+            "sourceColumn": "AvgBasketSize",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "AvgBasketSize",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "ProductsSold",
+            "dataType": "int64",
+            "sourceColumn": "ProductsSold",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "ProductsSold",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ActiveDays",
+            "dataType": "int64",
+            "sourceColumn": "ActiveDays",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "ActiveDays",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StoreName",
+            "dataType": "string",
+            "sourceColumn": "StoreName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "City",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "State",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Region",
+            "dataType": "string",
+            "sourceColumn": "Region",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Region",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "StoreType",
+            "dataType": "string",
+            "sourceColumn": "StoreType",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "StoreType",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "OpenDate",
+            "dataType": "dateTime",
+            "sourceColumn": "OpenDate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "OpenDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "SquareFootage",
+            "dataType": "int64",
+            "sourceColumn": "SquareFootage",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "SquareFootage",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ManagerID",
+            "dataType": "string",
+            "sourceColumn": "ManagerID",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ManagerID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "storagAgeYears",
+            "dataType": "double",
+            "sourceColumn": "storagAgeYears",
+            "sourceProviderType": "float",
+            "sourceLineageTag": "storagAgeYears",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "SizeBucket",
+            "dataType": "string",
+            "sourceColumn": "SizeBucket",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "SizeBucket",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "IsPremiumStore",
+            "dataType": "boolean",
+            "sourceColumn": "IsPremiumStore",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "bit",
+            "sourceLineageTag": "IsPremiumStore",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "silver_loads_ts",
+            "dataType": "dateTime",
+            "sourceColumn": "silver_loads_ts",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "silver_loads_ts",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "region_window",
+            "dataType": "int64",
+            "sourceColumn": "region_window",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "region_window",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "OverallRank",
+            "dataType": "int64",
+            "sourceColumn": "OverallRank",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "OverallRank",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "RevenuePerSqFt",
+            "dataType": "double",
+            "sourceColumn": "RevenuePerSqFt",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "RevenuePerSqFt",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ]
+          },
+          {
+            "name": "_gold_load_ts",
+            "dataType": "dateTime",
+            "sourceColumn": "_gold_load_ts",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "_gold_load_ts",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "vw_store_performance",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}
